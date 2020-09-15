@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d10513c57b.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="../css/home-style.css">
     <link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/responsive.css">
     <title>covid19info | Home</title>
@@ -102,7 +103,7 @@
         <div class="main-area">
             <h2 class="format">Covid-19 Data of Latest Updated Day</h2>
             <div class="caption"> </div>
-            <div class="table">
+            <div class="table" data-aos="fade-up">
                 <div class="daily-confirmed tabular">
                     <p>Today Confirmed </p>
                     <p class="daily-data1"></p>
@@ -124,7 +125,7 @@
     <div class="last-month">
         <div class="chart-topic">
             <h2 class="format">Last 30 Days Rise in Covid-19 Cases</h2>
-            <canvas id="myChart"></canvas>
+            <canvas id="myChart" data-aos="fade-up"></canvas>
         </div>
     </div>
 
@@ -148,6 +149,14 @@
             </div>
         </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1000
+        });
+    </script>
 
     <script src="../js/covid.js"></script>
     <script src="../js/01app.js"></script>

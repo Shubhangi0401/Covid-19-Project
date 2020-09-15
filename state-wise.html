@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/d10513c57b.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/stateWise-style.css">
     <title>covid19info | State-wise Covid-19 Data</title>
@@ -60,7 +61,7 @@
     <div class="state-wise">
         <div class="state-content">
             <h2 class="caption format">State-wise Covid-19 Data</h2>
-            <table class="data-table">
+            <table class="data-table" data-aos="fade-up">
                 <tr class="heads">
                     <th class="head-item first-format">States/UT</th>
                     <th class="head-item first-format">Active</th>
@@ -92,6 +93,14 @@
             </div>
         </div>
     </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 200,
+            duration: 1000
+        });
+    </script>
 
     <script src="../js/covid.js"></script>
     <script src="../js/02state.js"></script>
