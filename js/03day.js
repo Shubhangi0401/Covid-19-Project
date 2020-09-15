@@ -90,9 +90,8 @@ choose.addEventListener('input', () => {
         showLatestData(date1, dailyCon, dailyRec, dailyDec);
     } else {
         showError(`Please select a date between 30 January and ${dayInfo[dayInfo.length - 1].date}.`);
+        choose.value = '';
     }
-
-
 });
 
 function showError(error) {
