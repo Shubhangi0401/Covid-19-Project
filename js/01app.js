@@ -37,7 +37,7 @@ function getInfo() {
 
 function updateCount(element, number) {
     let num = +number;
-    const speed = 140;
+    const speed = 100;
     const update = () => {
         const count = +element.innerText;
         const inc = num / speed;
