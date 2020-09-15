@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d10513c57b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" media="screen and (max-width: 1200px)" href="../css/responsive.css">
+    <link rel="stylesheet" href="../css/day-wise.css">
+    <title>covid19info | Day-Wise Covid-19 Data</title>
+</head>
+
+<body>
+
+    <!-- hamburger menu -->
+
+    <input type="checkbox" id="check">
+    <label for="check" class="check-lines">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header>Menu</header>
+        <a href="../html/index.html">
+            <span>Home</span>
+        </a>
+        <a href="../html/state-wise.html">
+            <span>State-wise Covid-19 Data</span>
+        </a>
+        <a href="../html/day-wise.html">
+            <span>Day-wise Covid-19 Data</span>
+        </a>
+        <a href="../html/precautions.html">
+            <span>Precautions</span>
+        </a>
+    </div>
+
+    <!-- header -->
+
+    <header id="header" class="container">
+        <div class="header">
+            <div class="content">
+                <h1 class="main"> COVID-19 INDIA UPDATES </h1>
+                <h1 class="under-heading">#IndiaFightsCovid-19</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- day-wise -->
+
+    <section id="day-wise">
+        <div class="day-wise">
+            <h2>Day-Wise Covid-19 Data</h2>
+            <label for="choose-date" class="choose-date">Choose Date</label>
+            <input type="date" id="date" class="date1">
+        </div>
+        <div class="day-data">
+            <div class="outer-day-box">
+                <img src="../images/calendar.png">
+                <div class="day-box">
+                    <div class="day-content content-format">
+                        <p class="date">Date</p>
+                        <p class="conf">Confirmed</p>
+                        <p class="reco">Recovered</p>
+                        <p class="deat">Deaths</p>
+                    </div>
+                    <div class="data-content content-format"> </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+
+    <div id="footer">
+        <div class="footer">
+            <div class="footer-content">
+                <div class="social-icons">
+                    <a href="https://github.com/Shubhangi0401" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="http://www.linkedin.com/in/shubhangidixit50" target="_blank"><i
+                            class="fab fa-linkedin-in fa-2x"></i></a>
+                </div>
+                <div class="other-content">
+                    <p class="second">All Rights Reserved</p>
+                    <p class="first">2020 &copy; | covid19info</p>
+                    <p class="credit">Icons : <a href="https://www.flaticon.com/">Flaticon</a> and <a
+                            href="https://fontawesome.com/">FontAwesome</a></p>
+                    <p class="third">Made and Coded With <span>❤</span> by Shubhangi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/covid.js"></script>
+    <script src="../js/03day.js"></script>
+</body>
+
+</html>

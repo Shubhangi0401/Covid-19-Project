@@ -1,0 +1,263 @@
+/* ---------------------------------- portrait ------------------------------- */
+
+/* unlock - popup */
+.popup-content { font-size: 0.8rem; }
+
+/* grid */
+.inner-grid-box .para { 
+  padding-top: 0.2rem;
+  font-size: 0.9rem;
+}
+
+/* 900 */
+
+@media screen and (max-width: 900px) {
+
+  .content .main { font-size: 2.1rem !important; }
+
+  .content .under-heading { font-size: 2rem !important; }
+
+  .name, .number { font-size: 0.8rem; }
+
+  .inner-grid-box {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+  } 
+
+  .inner-grid-box .icon { padding: 0rem; }
+
+  .inner-grid-box .icon img { height: 90px; padding-bottom: 1rem; }
+
+  .inner-grid-box .head { padding: 0.6rem; font-size: 1.5rem; }
+
+  .inner-grid-box .para { 
+    padding: 0rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* 600 */
+
+@media screen and (max-width: 600px) {
+
+  .header .content { letter-spacing: 3px !important; }
+
+  .content .main { font-size: 1.6rem !important; }
+
+  .content .under-heading { font-size: 1.2rem !important; }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .name, .number { font-size: 1.2rem; }
+
+  .sidebar {
+    width: 240px !important;
+    left: -240px;
+  } 
+
+  #check:checked ~ label #btn, #check:checked ~ label #cancel { margin-left: 245px !important; } 
+
+  .sidebar a { font-size: 0.75rem; } 
+
+  #stateChart { visibility: hidden; }
+
+  .state-content h2 { font-size: 1.7rem; margin-top: -22rem; }
+
+  .first-format { font-size: 0.7rem !important; }
+  .entry-item { font-size: 0.6rem !important; }  
+  
+  .outer-box { 
+    display: flex;
+    flex-direction: column;
+  }
+
+  .inner-grid-box { height: 25rem; }
+
+  .inner-grid-box .icon img { height: 120px; }
+
+  .inner-grid-box .head { font-size: 1.7rem; padding-top: 1.5rem;}
+
+  .inner-grid-box .para { 
+    padding: 0rem 2rem;
+    font-size: 1rem;
+  }  
+}
+
+/* 500 */
+
+@media screen and (max-width: 500px) {
+
+  .header .content { letter-spacing: 3px !important; }
+
+  .content .main { font-size: 1.1rem !important; }
+
+  .content .under-heading { font-size: 0.9rem !important; }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards .box { width: 22rem; }
+
+  .table { width: 22rem; }
+
+  .state-content h2 { margin-top: -15rem; font-size: 1.8rem;}
+
+  .first-format { font-size: 0.7rem !important; }
+  .entry-item { font-size: 0.6rem !important; }
+  
+  .inner-grid-box .icon img { height: 90px; }
+
+  .inner-grid-box { height: 27rem; }
+
+  .inner-grid-box .para { font-size: 0.9rem; }  
+
+  .outer-day-box, .error { width: 370px !important; }
+
+  .content-format { font-size: 1.2rem !important; }
+  .data-content span { font-size: 1.16rem !important; }
+}
+
+@media screen and (max-width: 411px) {
+
+  .sidebar {
+    width: 200px !important;
+    left: -200px;
+  }
+
+  #check:checked ~ label #btn, #check:checked ~ label #cancel { margin-left: 205px !important; }
+
+  .sidebar a { font-size: 0.6rem; }  
+
+  .cards .box { width: 18rem; }
+
+  .table { width: 20rem; }
+
+  .state-content h2 { margin-top: -15rem; font-size: 1.7rem;}
+
+  .first-format { font-size: 0.6rem !important; }
+  .entry-item { font-size: 0.5rem !important; }
+
+  .outer-day-box, .error { width: 320px !important; }
+
+  .content-format { font-size: 1.2rem !important; }
+  .data-content span { font-size: 1rem !important; }
+}
+
+/* 360.. */
+
+@media screen and (max-width: 360px) {
+
+  .content .main { font-size: 1rem !important; }
+
+  .content .under-heading { font-size: 0.8rem !important; }
+
+  h2 { font-size: 1.6rem !important; }
+
+  .cards .box { width: 18rem; }
+
+  .table { width: 18rem; }
+
+  .state-content h2 { margin-top: -15rem; font-size: 1.7rem;}
+
+  .first-format { font-size: 0.5rem !important; }
+  .entry-item { font-size: 0.6rem !important; }
+  
+  .inner-grid-box .icon img { height: 80px; }
+
+  .inner-grid-box { height: 30rem; }
+  .inner-grid-box .para { font-size: 0.9rem; }
+
+  .outer-day-box, .error { width: 280px !important; }
+
+  .content-format { font-size: 1rem !important; }
+  .data-content span { font-size: 0.84rem !important; }
+}
+
+@media screen and (max-width: 320px) {
+
+  .content .main { font-size: 0.7rem !important; }
+
+  .content .under-heading { font-size: 0.6rem !important; }
+
+  .sidebar {
+    width: 200px !important;
+    left: -200px;
+  }
+
+  #check:checked ~ label #btn, #check:checked ~ label #cancel { margin-left: 205px !important; }
+  .sidebar a { font-size: 0.6rem; } 
+
+  .state-content h2 { margin-top: -15rem; font-size: 1.7rem;}
+
+  .inner-grid-box { height: 35rem; }
+
+  .outer-day-box, .error { width: 250px !important; }
+
+  .content-format { font-size: 1rem !important; }
+  .data-content span { font-size: 0.8rem !important; }
+}
+
+
+/* -------------------------------- landscape ------------------------------- */
+
+@media screen and (max-width: 1200px) and (orientation: landscape) {
+
+  .header .content { letter-spacing: 2px !important; }
+
+  .content .main { font-size: 1rem !important; }
+
+  .content .under-heading { font-size: 0.9rem !important; }
+
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+
+  .name, .number { font-size: 1.2rem; }
+
+  #stateChart { visibility: hidden; }
+
+  .state-content h2 { margin-top: -24rem; font-size: 1.8rem; }
+
+  .first-format { font-size: 0.9rem !important; }
+  .entry-item { font-size: 0.8rem !important; }
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+
+  .state-content h2 { margin-top: 0rem; font-size: 1.8rem; }
+
+  .header .content { letter-spacing: 5px !important; }
+
+  .content .main { font-size: 1.5rem !important; }
+
+  .content .under-heading { font-size: 1.4rem !important; }  
+
+  #stateChart { visibility: visible; }
+
+}
+
+@media screen and (max-width: 720px) and (orientation: landscape) { 
+
+  .state-content h2 { margin-top: -25rem; font-size: 1.5rem; } 
+
+  #stateChart { visibility: hidden; }
+
+  .header .content { letter-spacing: 2px !important; }
+
+  .content .main { font-size: 0.95rem !important; }
+
+  .content .under-heading { font-size: 0.8rem !important; }  
+
+  .sidebar a { height: 50px !important; }
+}

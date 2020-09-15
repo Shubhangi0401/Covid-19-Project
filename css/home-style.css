@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: #fff1e6;
+    font-weight: 400;
+}
+
+/* -------------------------------- header ---------------------------- */
+
+#header { padding: 1rem; }
+
+.header {
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    background-position: center;
+    background-size: cover;
+    height: 20vh;
+}
+
+.header .content {
+    margin: auto;
+    line-height: 1.5;
+    text-align: center;
+    letter-spacing: 10px;
+    padding: 1rem 4rem;
+    color: #f1faee;
+    backface-visibility: hidden;
+}
+
+.content .main {
+    font-size: 2.6rem;
+    animation: moveRight 1s ease-out;
+}
+
+.content .under-heading {
+    font-size: 2.1rem;
+    animation: moveLeft 1s ease-out;
+}
+
+@keyframes moveRight {
+    0%{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80% {
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveLeft {
+    0%{
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    80% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* -------------------------- navigation bar ------------------------ */
+
+.sidebar {
+    position: fixed;
+    width: 340px;
+    left: -340px;
+    height: 100%;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    border-right: black 1px solid;
+    transition: all .5s ease;
+    z-index: 1000;
+}
+
+.sidebar header {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1371a5;
+    line-height: 70px;
+    text-align: center;
+    background: #caf0f8;
+    border-bottom: 1px solid black;
+    user-select: none;
+}
+
+.sidebar a {
+    display: block;
+    height: 65px;
+    width: 100%;
+    color: #caf0f8;
+    line-height: 65px;
+    padding-left: 30px;
+    box-sizing: border-box;
+    text-decoration: none;
+    border-bottom: 1px solid black;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #caf0f8 50%);
+    background-size: 220%;
+    transition: all .5s ease;
+}
+
+a:hover {
+    background-position: 100%;
+    color: #03055e;
+}
+
+.sidebar a span {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+#check { display: none; }
+
+.check-lines {
+    z-index: 2000;
+    position: absolute;
+}
+
+label #btn,label #cancel {
+    position: fixed;
+    cursor: pointer;
+    color: #caf0f8;
+    border-radius: 5px;
+    margin: 30px 30px;
+    font-size: 29px;
+    background-color: #8a8585;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+    line-height: 45px;
+    transition: all .5s ease;
+}
+
+label #cancel {
+    opacity: 0;
+    visibility: hidden;
+}
+
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+#check:checked ~ label #btn {
+    margin-left: 345px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#check:checked ~ label #cancel {
+    margin-left: 345px;
+    opacity: 1;
+    visibility: visible;
+}
+
+/* -------------------------- main - area --------------------------- */
+/* -------- total cases card -------- */
+
+.format {
+    font-size: 2.3rem;
+    color: #335c67;
+    text-align: center;
+    font-weight: 600;
+}
+
+.total-cases h2 { margin-top: 2rem; }
+
+.total {
+    font-size: 2.3rem;
+    color: #5f0f40;
+    text-align: center;
+    font-weight: 600;
+}
+
+.plus { color: #5f0f40; }
+
+.last-updated {
+    display: flex;
+    color: #5f0f40;
+    font-size: 1rem;
+    font-weight: 600;
+    align-items: center;
+    padding-top: 1rem;
+    justify-content: center;
+}
+
+.increment {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    text-align: center;
+    padding: 0rem 1rem;
+    margin: 2.5rem auto;
+}
+
+.cards .box {
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgba(27, 26, 26, 0.9);
+    color: #caf0f8;
+    padding: 2rem;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0.5rem;
+    transition: all 0.5s ease;
+}
+
+.name, .number { 
+    font-size: 1.5rem; 
+    font-weight: 700;
+}
+
+.box1 { background-color: #1371A5; }
+.box2 { background-color: #3C7C76; }
+.box3 { background-color: #B74B60; }
+.box4 { background-color: #6D469B; }
+
+.cards .box:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* ------- latest updated day ------- */
+
+#main-area {
+    margin-top: 2.5rem;
+    text-align: center;
+    color: #03055e;
+}
+
+.caption .date {
+    color: #5f0f40;
+    font-size: 1.8rem;
+    padding-top: 1.2rem;
+}
+
+.caption .date-value {
+    color: #5f0f40;
+    font-size: 1.5rem;
+    padding: 0.2rem 0rem;
+}
+
+.table {
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-rows: 1fr 1fr 1fr;
+    max-width: 500px;
+    margin: 1rem auto;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    color: #caf0f8;
+    text-align: left;
+    font-weight: 600;
+    background-color: #8a8585;
+    box-shadow: 10px 10px 10px rgba(27, 26, 26, 0.9);
+    border-radius: 10px;
+}
+
+.tabular {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.tabular .daily-data1 ,
+.tabular .daily-data2,
+.tabular .daily-data3 {
+    text-align: right;
+    color: #caf0f8;
+}
+
+/*--------- last month Chart ----------*/
+
+.chart-topic {
+    max-width: 1200px;
+    margin: 2.7rem auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-topic h2 { margin-bottom: 2rem; }
+
+/* ------------------------------ footer ------------------------ */
+
+#footer {
+    width: 100%;
+    background-image: linear-gradient(-225deg, #473B7B 0%, #3584A7 51%, #30D2BE 100%);
+    color: #caf0f8;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 0rem;
+    margin-top: 2rem;
+    text-align: center;
+    line-height: 2rem;
+}
+
+.other-content span { color: #B74B60; }
+
+.social-icons i {
+    padding-right: 0.5rem;
+    color: #caf0f8; 
+    transition: all 0.2s ease-in-out;   
+}
+
+.other-content .credit a{
+    text-decoration: none;
+    color: #03055e;
+}
+
+.social-icons i:hover, .other-content .credit a:hover { color: #B74B60; }
